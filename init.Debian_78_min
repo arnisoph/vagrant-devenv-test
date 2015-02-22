@@ -1,0 +1,6 @@
+export \
+  BOX_NAME=debian_test \
+  BOX_BASE=../vagrant-devenv/shared/boxes/DEV_Debian_78_min-virtualbox-0.1.box
+vagrant up
+vagrant ssh
+vagrant destroy

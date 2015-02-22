@@ -9,13 +9,13 @@ Vagrant.require_version ">= 1.6.5"
 
 Vagrant.configure("2") do |config|
   # make sure path to new box is passed as environment variable
-  BOX_NAME=ENV['NAME'] || 'undef'
-  BOX_PATH=ENV['BOX'] || 'undef'
+  BOX_NAME=ENV['BOX_NAME'] || 'undef'
+  BOX_BASE_PATH=ENV['BOX_BASE'] || 'undef'
 
   # box name and hostname
   config.vm.box = BOX_NAME
 
-  config.vm.box_url = "file://" + __dir__ + "/#{BOX_PATH}"
+  config.vm.box_url = "file://" + __dir__ + "/#{BOX_BASE_PATH}"
 
   # display virtualbox console
   config.vm.provider "virtualbox" do |vb|

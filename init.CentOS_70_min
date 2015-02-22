@@ -1,0 +1,6 @@
+export \
+  BOX_NAME=centos_test \
+  BOX_BASE=../vagrant-devenv/shared/boxes/DEV_CentOS_70_min-virtualbox-0.1.box
+vagrant up
+vagrant ssh
+vagrant destroy
