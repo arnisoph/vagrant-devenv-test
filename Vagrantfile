@@ -20,9 +20,6 @@ Vagrant.configure("2") do |config|
   # display virtualbox console
   config.vm.provider "virtualbox" do |vb|
     vb.gui = false
-  end
-
-  config.vm.provider :virtualbox do |vb|
     vb.customize ["modifyvm", :id, "--natdnshostresolver1", "on"]
   end
 end
